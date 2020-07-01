@@ -10,14 +10,14 @@ class Profile extends Model
 
     public function profileImage()
     {
-        $imagePath = ($this->profile_image) ? $this->profile_image : 'profile/7CeZaQ9Uh2PLU9gQyZ7B7pcUIF2c7C3MJ93RQ41Z.jpeg';
-        return '/storage/'. $imagePath;
+        $imagePath = ($this->profile_image) ? '/storage/' . $this->profile_image : 'https://pbs.twimg.com/media/C8QsNInXUAAyjZQ.jpg';
+        return $imagePath;
     }
 
     public function coverImage()
     {
-        $imagePath = ($this->cover_image) ? $this->cover_image : 'profile\PwdzeIFKmYmt5ta0AvTehzK4i6PXcPgFALsvOICG.jpeg';
-        return '/storage/'. $imagePath;
+        $imagePath = ($this->cover_image) ? '/storage/' . $this->cover_image : 'https://storycorpsorg-staging.s3.amazonaws.com/uploads/HeroLightBlue-1500x500-1-1500x500.png';
+        return $imagePath;
     }
 
     public function user()
